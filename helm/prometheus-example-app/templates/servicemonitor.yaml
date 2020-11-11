@@ -4,6 +4,7 @@ kind: ServiceMonitor
 metadata:
   name: {{ include "prometheus-example-app.fullname" . }}
   labels:
+    app.kubernetes.io/vendor: kubesphere
     {{- include "prometheus-example-app.labels" . | nindent 4 }}
 spec:
   selector:
